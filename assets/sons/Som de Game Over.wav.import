@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://c81wjkffvbimd"
+path="res://.godot/imported/Som de Game Over.wav-4c568d6b9843df795b55fc50ec6ed274.sample"
+
+[deps]
+
+source_file="res://assets/sons/Som de Game Over.wav"
+dest_files=["res://.godot/imported/Som de Game Over.wav-4c568d6b9843df795b55fc50ec6ed274.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=0

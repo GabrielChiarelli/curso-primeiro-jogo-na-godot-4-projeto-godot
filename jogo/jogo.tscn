@@ -1,0 +1,31 @@
+[gd_scene load_steps=7 format=3 uid="uid://dj1b16epvli2w"]
+
+[ext_resource type="PackedScene" uid="uid://bq383mn7663gn" path="res://piso/piso.tscn" id="1_fkaxi"]
+[ext_resource type="PackedScene" uid="uid://bv1r0pb6rpo2r" path="res://jogador/jogador.tscn" id="2_5q0tj"]
+[ext_resource type="PackedScene" uid="uid://b0sgxkirest5p" path="res://gerador_de_objetos/gerador_de_objetos.tscn" id="3_y338x"]
+[ext_resource type="PackedScene" uid="uid://cryyvw77jpck5" path="res://ui/ui.tscn" id="4_u4mxv"]
+[ext_resource type="Texture2D" uid="uid://cc46tkgp268gv" path="res://assets/sprites/objetos/background.png" id="5_yt8eu"]
+[ext_resource type="PackedScene" uid="uid://dl4kthr0p4iab" path="res://parede/parede.tscn" id="6_hfgfx"]
+
+[node name="Jogo" type="Node2D"]
+
+[node name="Piso" parent="." instance=ExtResource("1_fkaxi")]
+position = Vector2(640, 360)
+
+[node name="Jogador" parent="." instance=ExtResource("2_5q0tj")]
+position = Vector2(640, 523)
+
+[node name="GeradorDeObjetos" parent="." instance=ExtResource("3_y338x")]
+
+[node name="UI" parent="." instance=ExtResource("4_u4mxv")]
+
+[node name="Background" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(640, 360)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("5_yt8eu")
+
+[node name="Parede" parent="." instance=ExtResource("6_hfgfx")]
+
+[node name="Parede2" parent="." instance=ExtResource("6_hfgfx")]
+position = Vector2(1280, 0)

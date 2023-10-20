@@ -1,0 +1,43 @@
+[gd_scene load_steps=7 format=3 uid="uid://bv1r0pb6rpo2r"]
+
+[ext_resource type="Texture2D" uid="uid://dao6lwrx64awl" path="res://assets/sprites/jogador/jogador_andando_01.png" id="1_gohe1"]
+[ext_resource type="Script" path="res://jogador/jogador.gd" id="1_vodxy"]
+[ext_resource type="Texture2D" uid="uid://d1g6d1n33k06d" path="res://assets/sprites/jogador/jogador_andando_02.png" id="2_qjspf"]
+[ext_resource type="Texture2D" uid="uid://cdkgfsdl6h0bx" path="res://assets/sprites/jogador/jogador_parado.png" id="3_aly58"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4ge0d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_gohe1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qjspf")
+}],
+"loop": true,
+"name": &"andando",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_aly58")
+}],
+"loop": true,
+"name": &"parado",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ojts1"]
+size = Vector2(80, 94)
+
+[node name="Jogador" type="CharacterBody2D" groups=["jogador"]]
+script = ExtResource("1_vodxy")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_4ge0d")
+animation = &"parado"
+autoplay = "parado"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, 25)
+shape = SubResource("RectangleShape2D_ojts1")

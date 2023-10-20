@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://b0sgxkirest5p"]
+
+[ext_resource type="Script" path="res://gerador_de_objetos/gerador_de_objetos.gd" id="1_tvp4f"]
+[ext_resource type="PackedScene" uid="uid://fy3xy6hwe4pp" path="res://serra/serra.tscn" id="2_acmgh"]
+[ext_resource type="PackedScene" uid="uid://dhf672imoe3sl" path="res://diamante/diamante.tscn" id="3_2gyi0"]
+
+[node name="GeradorDeObjetos" type="Node2D"]
+script = ExtResource("1_tvp4f")
+objetos_para_gerar = Array[PackedScene]([ExtResource("2_acmgh"), ExtResource("3_2gyi0")])
+
+[node name="PontosOndeGerar" type="Node2D" parent="."]
+
+[node name="Marker2D" type="Marker2D" parent="PontosOndeGerar"]
+position = Vector2(200, -100)
+
+[node name="Marker2D2" type="Marker2D" parent="PontosOndeGerar"]
+position = Vector2(400, -100)
+
+[node name="Marker2D3" type="Marker2D" parent="PontosOndeGerar"]
+position = Vector2(600, -100)
+
+[node name="Marker2D4" type="Marker2D" parent="PontosOndeGerar"]
+position = Vector2(800, -100)
+
+[node name="Marker2D5" type="Marker2D" parent="PontosOndeGerar"]
+position = Vector2(1000, -100)
+
+[node name="Marker2D6" type="Marker2D" parent="PontosOndeGerar"]
+position = Vector2(1200, -100)
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="ObjetosGerados" type="Node2D" parent="."]
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

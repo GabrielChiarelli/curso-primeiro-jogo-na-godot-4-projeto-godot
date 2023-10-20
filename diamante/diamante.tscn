@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://dhf672imoe3sl"]
+
+[ext_resource type="Texture2D" uid="uid://thg88swx5508" path="res://assets/sprites/objetos/diamante.png" id="1_8jugu"]
+[ext_resource type="Script" path="res://diamante/diamante.gd" id="1_ldqro"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5in82"]
+radius = 41.0
+
+[node name="Diamante" type="Area2D"]
+script = ExtResource("1_ldqro")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_8jugu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5in82")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

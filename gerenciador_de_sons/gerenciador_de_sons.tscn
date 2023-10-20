@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://drq5n5mrq745r"]
+
+[ext_resource type="Script" path="res://gerenciador_de_sons/gerenciador_de_sons.gd" id="1_apj0o"]
+[ext_resource type="AudioStream" uid="uid://8fgpyq8txwu" path="res://assets/sons/Som da Moeda.mp3" id="1_naa3j"]
+[ext_resource type="AudioStream" uid="uid://c5b8hm54qgadi" path="res://assets/sons/Música de Fundo.mp3" id="2_6kaof"]
+[ext_resource type="AudioStream" uid="uid://c81wjkffvbimd" path="res://assets/sons/Som de Game Over.wav" id="3_tjgft"]
+
+[node name="GerenciadorDeSons" type="Node2D"]
+script = ExtResource("1_apj0o")
+
+[node name="SomDoDiamante" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("1_naa3j")
+volume_db = -10.0
+
+[node name="MusicaDeFundo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_6kaof")
+volume_db = -10.0
+autoplay = true
+
+[node name="SomDeGameOver" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_tjgft")
+volume_db = -10.0

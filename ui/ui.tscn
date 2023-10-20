@@ -1,0 +1,97 @@
+[gd_scene load_steps=6 format=3 uid="uid://cryyvw77jpck5"]
+
+[ext_resource type="FontFile" uid="uid://f6mh3rd8ke8u" path="res://assets/font/BalsamiqSans-Bold.ttf" id="1_8tvfb"]
+[ext_resource type="Script" path="res://ui/ui.gd" id="1_blxgk"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_h72bg"]
+font = ExtResource("1_8tvfb")
+font_size = 50
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_6vb5u"]
+font = ExtResource("1_8tvfb")
+font_size = 50
+font_color = Color(1, 0.12549, 0.0588235, 1)
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 5)
+
+[sub_resource type="LabelSettings" id="LabelSettings_qwn55"]
+font = ExtResource("1_8tvfb")
+font_size = 25
+font_color = Color(0.901961, 0.768627, 0, 1)
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_color = Color(0, 0, 0, 1)
+shadow_offset = Vector2(0, 2)
+
+[node name="UI" type="CanvasLayer"]
+script = ExtResource("1_blxgk")
+
+[node name="PainelDePontuacao" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PainelDePontuacao"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -173.0
+offset_right = 173.0
+offset_bottom = 73.0
+grow_horizontal = 2
+theme_override_constants/margin_top = 10
+
+[node name="TextoDePontuacao" type="Label" parent="PainelDePontuacao/MarginContainer"]
+layout_mode = 2
+text = "0"
+label_settings = SubResource("LabelSettings_h72bg")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PainelDeGameOver" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PainelDeGameOver"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PainelDeGameOver/MarginContainer"]
+layout_mode = 2
+
+[node name="TextoDeGameOver" type="Label" parent="PainelDeGameOver/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "GAME OVER"
+label_settings = SubResource("LabelSettings_6vb5u")
+horizontal_alignment = 1
+
+[node name="TextoDeInstrucao" type="Label" parent="PainelDeGameOver/MarginContainer/VBoxContainer"]
+layout_mode = 2
+text = "PRESSIONE \"R\" PARA  JOGAR NOVAMENTE"
+label_settings = SubResource("LabelSettings_qwn55")
+horizontal_alignment = 1
