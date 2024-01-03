@@ -4,7 +4,7 @@ Projeto Godot do jogo que criamos no curso "Godot 4: Crie seu primeiro jogo na G
 <br>
 Espero que se divirta bastante e aprenda diversas coisas novas com ele :)
 <br>
-<!-- Para acessar o curso, <a href="">clique aqui</a> -->
+Para acessar o curso, <a href="https://www.udemy.com/course/godot-4-crie-seu-primeiro-jogo-na-godot-usando-gdscript/?referralCode=32FB71C00E7F0238FC39">clique aqui</a>.
 <br>
 <br>
 
