@@ -1,6 +1,8 @@
 <h2>Godot 4: Crie seu primeiro jogo na Godot usando GDScript [Curso Udemy]</h2>
 Projeto Godot do jogo que criamos no curso "Godot 4: Crie seu primeiro jogo na Godot usando GDScript", disponível na Udemy.
 <br>
+*Esse projeto utiliza a versão 4.1.1 do programa.
+<br>
 <br>
 Espero que se divirta bastante e aprenda diversas coisas novas com ele :)
 <br>
